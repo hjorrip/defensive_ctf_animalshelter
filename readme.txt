@@ -7,5 +7,6 @@ Manual startup works:
     docker run -it --rm -p 5000:5000 --name ctfserver ctfserver
 
     #2 Build and start the client
-    /AnimalShelter-Client -t ctfclient .
+    /AnimalShelter-Client 
+    docker build -t ctfclient .
     Docker run --rm -p 8080:8080 --name ctfclient ctfclient
