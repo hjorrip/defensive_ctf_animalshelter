@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  animalshelter-server:
+    build: ./AnimalShelter-Server/AnimalAPI/
+    ports:
+      - 5000:5000
+  animalshelter-client:
+    build: ./AnimalShelter-Client/
+    ports:
+      - 8080:8080
