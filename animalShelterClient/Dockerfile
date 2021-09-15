@@ -1,7 +1,11 @@
-FROM node:lts-alpine
+FROM debian:stable-slim
 
 # install simple http server for serving static content
+RUN apt update && apt install nodejs npm -y
 RUN npm install -g http-server
+
+# Setup SSH
+RUN apt install -y openssh-server && mkdir /var/run/sshd && echo "root:notS0S3cr3tSSHPa55" | chpasswd && sed -ri "s/^#?PermitRootLogin\s+.*/PermitRootLogin yes/" /etc/ssh/sshd_config && sed -ri "s/UsePAM yes/#UsePAM yes/g" /etc/ssh/sshd_config && mkdir /root/.ssh
 
 # make the 'app' folder the current working directory
 WORKDIR /app
