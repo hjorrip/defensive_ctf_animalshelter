@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>[SOLVED] Defensive CTF: Judge</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.css') }}"/>
+    </head>
+    <body>
+        <div class="contentBox">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h1 class="text-center text-light"><b>Defensive CTF: Judge</b></h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <div class="fillWidth">
+                            <h3 class="text-center text-light">Congratulations! You solved the vulnerability!</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <h4 class="text-center text-light"><i>"Too Much Information":</i></h4>
+                        <p class="text-center text-light"><b>The flag is: </b>{{ flagTMI }}</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <h4 class="text-center text-light"><i>"Other ways to GET it?":</i></h4>
+                        <p class="text-center text-light"><b>The flag is: </b>{{ flagGET }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

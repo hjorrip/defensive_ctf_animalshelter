@@ -24,7 +24,7 @@ export default {
     };
   },
   async created() {
-    const response = await fetch("http://localhost:5000/api/animals");
+    const response = await fetch("http://api.animalshelter.hkn:5000/api/animals");
     const data = await response.json();
     this.animals = data;
   }

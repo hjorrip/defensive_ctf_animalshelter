@@ -64,7 +64,7 @@ export default {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(this.login)
         };
-        const response = await fetch("http://localhost:5000/api/authmanagement/login", requestOptions);
+        const response = await fetch("http://api.animalshelter.hkn:5000/api/authmanagement/login", requestOptions);
         const data = await response.json();
 
         if (data.success) { 

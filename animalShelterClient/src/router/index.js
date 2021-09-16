@@ -43,7 +43,7 @@ router.beforeEach(async(to, from, next) => {
 
 	if (to.meta.requiresAuth) {
 		const token = localStorage.getItem('userToken')
-    const response = await fetch("http://localhost:5000/api/authmanagement/validatejwt", {
+    const response = await fetch("http://api.animalshelter.hkn:5000/api/authmanagement/validatejwt", {
       headers: {
         'Authorization': 'Bearer ' + token 
       }

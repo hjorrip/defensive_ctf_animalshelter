@@ -32,7 +32,7 @@ export default {
   },
   async created() {
     const token = localStorage.getItem('userToken')
-    const response = await fetch("http://localhost:5000/api/customers", {
+    const response = await fetch("http://api.animalshelter.hkn:5000/api/customers", {
       headers: {
         'Authorization': 'Bearer ' + token 
       }
